@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ContractModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ContractModelStoreContainer">
+    <EntitySet Name="Contract" EntityType="ContractModel.Store.Contract" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="User" EntityType="ContractModel.Store.User" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="View_Contract_User" EntityType="ContractModel.Store.View_Contract_User" store:Type="Views" store:Schema="dbo" store:Name="View_Contract_User">
+      <DefiningQuery>SELECT 
+      [View_Contract_User].[UserName] AS [UserName], 
+      [View_Contract_User].[RealName] AS [RealName], 
+      [View_Contract_User].[LevelDescription] AS [LevelDescription], 
+      [View_Contract_User].[UserId] AS [UserId], 
+      [View_Contract_User].[ContractId] AS [ContractId], 
+      [View_Contract_User].[ContractName] AS [ContractName], 
+      [View_Contract_User].[ContractModule] AS [ContractModule], 
+      [View_Contract_User].[ContractFlow] AS [ContractFlow], 
+      [View_Contract_User].[ContractTask] AS [ContractTask], 
+      [View_Contract_User].[HandleState] AS [HandleState], 
+      [View_Contract_User].[ContractAssignTime] AS [ContractAssignTime], 
+      [View_Contract_User].[ContractTransactTime] AS [ContractTransactTime], 
+      [View_Contract_User].[Organizer] AS [Organizer], 
+      [View_Contract_User].[DeleGate] AS [DeleGate], 
+      [View_Contract_User].[TimeOut] AS [TimeOut], 
+      [View_Contract_User].[Contractors] AS [Contractors], 
+      [View_Contract_User].[MainUser] AS [MainUser], 
+      [View_Contract_User].[Approval] AS [Approval]
+      FROM [dbo].[View_Contract_User] AS [View_Contract_User]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Contract_User" Association="ContractModel.Store.FK_Contract_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Contract" EntitySet="Contract" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Contract">
+    <Key>
+      <PropertyRef Name="ContractId" />
+    </Key>
+    <Property Name="ContractId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ContractName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ContractModule" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ContractFlow" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ContractTask" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="HandleState" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ContractAssignTime" Type="datetime" Nullable="false" />
+    <Property Name="ContractTransactTime" Type="datetime" />
+    <Property Name="Organizer" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="DeleGate" Type="nvarchar" MaxLength="50" />
+    <Property Name="TimeOut" Type="nvarchar" MaxLength="50" />
+    <Property Name="Contractors" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="MainUser" Type="int" Nullable="false" />
+    <Property Name="Approval" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="PassWord" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="RealName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="LevelDescription" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'Contract.dbo.View_Contract_User' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="View_Contract_User">
+    <Key>
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="RealName" />
+      <PropertyRef Name="LevelDescription" />
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="ContractId" />
+      <PropertyRef Name="ContractName" />
+      <PropertyRef Name="ContractModule" />
+      <PropertyRef Name="ContractFlow" />
+      <PropertyRef Name="ContractTask" />
+      <PropertyRef Name="HandleState" />
+      <PropertyRef Name="ContractAssignTime" />
+      <PropertyRef Name="Organizer" />
+      <PropertyRef Name="Contractors" />
+      <PropertyRef Name="MainUser" />
+      <PropertyRef Name="Approval" />
+    </Key>
+    <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="RealName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="LevelDescription" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="ContractId" Type="int" Nullable="false" />
+    <Property Name="ContractName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ContractModule" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ContractFlow" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ContractTask" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="HandleState" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ContractAssignTime" Type="datetime" Nullable="false" />
+    <Property Name="ContractTransactTime" Type="datetime" />
+    <Property Name="Organizer" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="DeleGate" Type="nvarchar" MaxLength="50" />
+    <Property Name="TimeOut" Type="nvarchar" MaxLength="50" />
+    <Property Name="Contractors" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="MainUser" Type="int" Nullable="false" />
+    <Property Name="Approval" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Contract_User">
+    <End Role="User" Type="ContractModel.Store.User" Multiplicity="1" />
+    <End Role="Contract" Type="ContractModel.Store.Contract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Contract">
+        <PropertyRef Name="MainUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

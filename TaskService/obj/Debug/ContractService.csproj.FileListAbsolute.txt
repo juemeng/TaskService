@@ -1,0 +1,5 @@
+c:\users\zoul\documents\visual studio 2010\Projects\ContractService\ContractService\obj\Debug\ResolveAssemblyReference.cache
+c:\users\zoul\documents\visual studio 2010\Projects\ContractService\ContractService\bin\ContractService.dll
+c:\users\zoul\documents\visual studio 2010\Projects\ContractService\ContractService\bin\ContractService.pdb
+c:\users\zoul\documents\visual studio 2010\Projects\ContractService\ContractService\obj\Debug\ContractService.dll
+c:\users\zoul\documents\visual studio 2010\Projects\ContractService\ContractService\obj\Debug\ContractService.pdb
