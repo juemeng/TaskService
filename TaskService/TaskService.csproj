@@ -99,11 +99,11 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CastleInstanceProvider.cs" />
-    <Compile Include="CastleServiceBehavior.cs" />
-    <Compile Include="CastleServiceHost.cs" />
-    <Compile Include="CastleServiceHostFactory.cs" />
-    <Compile Include="Container.cs" />
+    <Compile Include="HostBuilder\CastleInstanceProvider.cs" />
+    <Compile Include="HostBuilder\CastleServiceBehavior.cs" />
+    <Compile Include="HostBuilder\CastleServiceHost.cs" />
+    <Compile Include="HostBuilder\CastleServiceHostFactory.cs" />
+    <Compile Include="HostBuilder\Container.cs" />
     <Compile Include="Converter\DataConverter.cs" />
     <Compile Include="DAL\TaskSystem.Designer.cs">
       <AutoGen>True</AutoGen>
