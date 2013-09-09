@@ -154,7 +154,7 @@ namespace TaskService.DAL
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -173,7 +173,7 @@ namespace TaskService.DAL
                 {
                     OnTaskIdChanging(value);
                     ReportPropertyChanging("TaskId");
-                    _TaskId = StructuralObject.SetValidValue(value);
+                    _TaskId = StructuralObject.SetValidValue(value, "TaskId");
                     ReportPropertyChanged("TaskId");
                     OnTaskIdChanged();
                 }
@@ -198,7 +198,7 @@ namespace TaskService.DAL
             {
                 OnTaskNameChanging(value);
                 ReportPropertyChanging("TaskName");
-                _TaskName = StructuralObject.SetValidValue(value, true);
+                _TaskName = StructuralObject.SetValidValue(value, true, "TaskName");
                 ReportPropertyChanged("TaskName");
                 OnTaskNameChanged();
             }
@@ -222,7 +222,7 @@ namespace TaskService.DAL
             {
                 OnDescriptionChanging(value);
                 ReportPropertyChanging("Description");
-                _Description = StructuralObject.SetValidValue(value, true);
+                _Description = StructuralObject.SetValidValue(value, true, "Description");
                 ReportPropertyChanged("Description");
                 OnDescriptionChanged();
             }
@@ -246,7 +246,7 @@ namespace TaskService.DAL
             {
                 OnTimeChanging(value);
                 ReportPropertyChanging("Time");
-                _Time = StructuralObject.SetValidValue(value, true);
+                _Time = StructuralObject.SetValidValue(value, true, "Time");
                 ReportPropertyChanged("Time");
                 OnTimeChanged();
             }
@@ -270,7 +270,7 @@ namespace TaskService.DAL
             {
                 OnOwner_IdChanging(value);
                 ReportPropertyChanging("Owner_Id");
-                _Owner_Id = StructuralObject.SetValidValue(value);
+                _Owner_Id = StructuralObject.SetValidValue(value, "Owner_Id");
                 ReportPropertyChanged("Owner_Id");
                 OnOwner_IdChanged();
             }
@@ -281,7 +281,6 @@ namespace TaskService.DAL
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -351,7 +350,7 @@ namespace TaskService.DAL
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -370,7 +369,7 @@ namespace TaskService.DAL
                 {
                     OnIdChanging(value);
                     ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value);
+                    _Id = StructuralObject.SetValidValue(value, "Id");
                     ReportPropertyChanged("Id");
                     OnIdChanged();
                 }
@@ -395,7 +394,7 @@ namespace TaskService.DAL
             {
                 OnNameChanging(value);
                 ReportPropertyChanging("Name");
-                _Name = StructuralObject.SetValidValue(value, true);
+                _Name = StructuralObject.SetValidValue(value, true, "Name");
                 ReportPropertyChanged("Name");
                 OnNameChanged();
             }
@@ -419,7 +418,7 @@ namespace TaskService.DAL
             {
                 OnPassWordChanging(value);
                 ReportPropertyChanging("PassWord");
-                _PassWord = StructuralObject.SetValidValue(value, true);
+                _PassWord = StructuralObject.SetValidValue(value, true, "PassWord");
                 ReportPropertyChanged("PassWord");
                 OnPassWordChanged();
             }
@@ -443,7 +442,7 @@ namespace TaskService.DAL
             {
                 OnEmailChanging(value);
                 ReportPropertyChanging("Email");
-                _Email = StructuralObject.SetValidValue(value, true);
+                _Email = StructuralObject.SetValidValue(value, true, "Email");
                 ReportPropertyChanged("Email");
                 OnEmailChanged();
             }
@@ -467,7 +466,7 @@ namespace TaskService.DAL
             {
                 OnIconUrlChanging(value);
                 ReportPropertyChanging("IconUrl");
-                _IconUrl = StructuralObject.SetValidValue(value, true);
+                _IconUrl = StructuralObject.SetValidValue(value, true, "IconUrl");
                 ReportPropertyChanged("IconUrl");
                 OnIconUrlChanged();
             }
@@ -491,7 +490,7 @@ namespace TaskService.DAL
             {
                 OnIsAdminChanging(value);
                 ReportPropertyChanging("IsAdmin");
-                _IsAdmin = StructuralObject.SetValidValue(value);
+                _IsAdmin = StructuralObject.SetValidValue(value, "IsAdmin");
                 ReportPropertyChanged("IsAdmin");
                 OnIsAdminChanged();
             }
@@ -502,7 +501,6 @@ namespace TaskService.DAL
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -533,5 +531,4 @@ namespace TaskService.DAL
 
     #endregion
 
-    
 }
