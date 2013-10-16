@@ -3,6 +3,7 @@ using System.Web.Routing;
 using System.ServiceModel.Activation;
 using Castle.MicroKernel.Registration;
 using TaskService.DAL;
+using TaskService.DAL.Repository;
 using TaskService.HostFactory;
 using TaskService.Repository;
 using Castle.Core;

@@ -20,14 +20,4 @@ C:\Users\zoul\Documents\Visual Studio 2010\Projects\TaskService\TaskService\bin\
 C:\Users\zoul\Documents\Visual Studio 2010\Projects\TaskService\TaskService\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\zoul\Documents\Visual Studio 2010\Projects\TaskService\TaskService\obj\Debug\ContractService.dll
 C:\Users\zoul\Documents\Visual Studio 2010\Projects\TaskService\TaskService\obj\Debug\ContractService.pdb
-D:\All Service\TaskService\TaskService\bin\ContractService.dll.config
-D:\All Service\TaskService\TaskService\bin\ContractService.dll
-D:\All Service\TaskService\TaskService\bin\ContractService.pdb
-D:\All Service\TaskService\TaskService\bin\Castle.Core.dll
-D:\All Service\TaskService\TaskService\bin\Castle.Windsor.dll
-D:\All Service\TaskService\TaskService\bin\EntityFramework.dll
-D:\All Service\TaskService\TaskService\bin\Castle.Core.xml
-D:\All Service\TaskService\TaskService\bin\Castle.Windsor.xml
-D:\All Service\TaskService\TaskService\bin\EntityFramework.xml
-D:\All Service\TaskService\TaskService\obj\Debug\ContractService.dll
-D:\All Service\TaskService\TaskService\obj\Debug\ContractService.pdb
+D:\All Service\TaskService\TaskService\obj\Debug\TaskService.csprojResolveAssemblyReference.cache

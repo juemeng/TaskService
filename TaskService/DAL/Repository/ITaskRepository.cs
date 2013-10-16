@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using TaskService.DAL;
+﻿using System.Linq;
 
-namespace TaskService.Repository
+namespace TaskService.DAL.Repository
 {
     public interface ITaskRepository:IRepository<Task>
     {

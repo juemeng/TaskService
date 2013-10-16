@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using TaskService.DAL;
+using TaskService.DAL.Repository;
 
 namespace TaskService.Repository
 {

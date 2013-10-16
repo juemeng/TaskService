@@ -7,6 +7,7 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 using System.ServiceModel.Activation;
+using TaskService.DAL.Repository;
 using TaskService.Repository;
 using TaskService.DAL;
 using TaskService.Converter;
