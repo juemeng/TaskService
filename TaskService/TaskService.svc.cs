@@ -19,38 +19,57 @@ namespace TaskService
     [AspNetCompatibilityRequirements(RequirementsMode=AspNetCompatibilityRequirementsMode.Allowed)]
     public class TaskService : ITaskService
     {
-        private IUserRepository _userRepository;
-        private ITaskRepository _taskRepository;
+//        private IUserRepository _userRepository;
+//        private ITaskRepository _taskRepository;
 
-        public TaskService(IUserRepository userRepository,ITaskRepository taskRepository)
+        public TaskService()
         {
-            _userRepository = userRepository;
-            _taskRepository = taskRepository;
+//            _userRepository = userRepository;
+//            _taskRepository = taskRepository;
         }
         
+
         
         public bool CheckLogin(LoginRequest request)
         {
-            var result = _userRepository.AuthenticUser(request.UserName, request.PassWord) != null;
-            if (result)
-            {
-                HttpContext.Current.Session["UserName"] = request.PassWord;
-            }
-            return result;
+//            var result = _userRepository.AuthenticUser(request.UserName, request.PassWord) != null;
+//            if (result)
+//            {
+//                HttpContext.Current.Session["UserName"] = request.PassWord;
+//            }
+//            return result;
+            return true;
         }
 
         public List<UserResponse> GetAllUser()
         {
             var list = new List<UserResponse>();
-            _userRepository.All().ToList().ForEach(u=> list.Add(DataConverter.UserConvertToDTO(u)));
+            //_userRepository.All().ToList().ForEach(u=> list.Add(DataConverter.UserConvertToDTO(u)));
             return list;
         }
 
         public List<TaskResponse> GetAllTask()
         {
             var list = new List<TaskResponse>();
-            _taskRepository.All().ToList().ForEach(t=> DataConverter.TaskConvertToDTO(t));
+            //_taskRepository.All().ToList().ForEach(t=> DataConverter.TaskConvertToDTO(t));
             return list;
+        }
+
+        public ADLoginResponse ADLogin(LoginRequest request)
+        {
+            return new ADLoginResponse
+            {
+                UserKey = "AAAABBBB",
+                User = new ADUser
+                {
+                    Anvandarnamn = request.UserName,
+                    MedlemsorganisationID = Guid.NewGuid(),
+                    MedlemsorganisationNamn = "Moto",
+                    MoGrupp = "Mo",
+                    MoGruppID = Guid.NewGuid(),
+                    SystemUserID = Guid.NewGuid()
+                }
+            };
         }
     }
 }

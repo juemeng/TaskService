@@ -25,6 +25,9 @@ namespace TaskService
         [WebGet(UriTemplate = "Tasks")]
         List<TaskResponse> GetAllTask();
 
+        [OperationContract]
+        [WebInvoke(UriTemplate = "ADLogin", Method = "POST")]
+        ADLoginResponse ADLogin(LoginRequest request);
     }
 
     #region DataContract
@@ -36,6 +39,32 @@ namespace TaskService
         public string UserName { get; set; }
         [DataMember]
         public string PassWord { get; set; }
+    }
+
+    [DataContract]
+    public class ADLoginResponse
+    {
+        [DataMember]
+        public string UserKey { get; set; }
+        [DataMember]
+        public ADUser User { get; set; }
+    }
+
+    [DataContract]
+    public class ADUser
+    {
+        [DataMember]
+        public string Anvandarnamn { get; set; }
+        [DataMember]
+        public Guid MedlemsorganisationID { get; set; }
+        [DataMember]
+        public string MedlemsorganisationNamn { get; set; }
+        [DataMember]
+        public string MoGrupp { get; set; }
+        [DataMember]
+        public Guid MoGruppID { get; set; }
+        [DataMember]
+        public Guid SystemUserID { get; set; }
     }
 
     [DataContract]

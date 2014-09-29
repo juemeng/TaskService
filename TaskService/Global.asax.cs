@@ -16,13 +16,15 @@ namespace TaskService
         {
             RegisterRoutes(RouteTable.Routes);
 
-
-            Container.Instance.Register(Component.For<ITaskRepository>().ImplementedBy<TaskRepository>(),
-                Component.For<IUserRepository>().ImplementedBy<UserRepository>(),
-                Component.For<TaskEntities>().ImplementedBy<TaskEntities>(),
+//            Container.Instance.Register(Component.For<ITaskRepository>().ImplementedBy<TaskRepository>(),
+//                Component.For<IUserRepository>().ImplementedBy<UserRepository>(),
+//                Component.For<TaskEntities>().ImplementedBy<TaskEntities>(),
+//                Component.For<ITaskService>().ImplementedBy<TaskService>().LifestylePerWebRequest()
+//                .Interceptors(InterceptorReference.ForType<WcfInterceptor>()).Anywhere,
+//                Component.For<WcfInterceptor>());
+            Container.Instance.Register(
                 Component.For<ITaskService>().ImplementedBy<TaskService>().LifestylePerWebRequest()
                 .Interceptors(InterceptorReference.ForType<WcfInterceptor>()).Anywhere,
-
                 Component.For<WcfInterceptor>());
         }
 
